@@ -23,9 +23,12 @@
     <table id="user_table" class="table table-bordered table-striped">
      <thead>
       <tr>
-       <th width="35%">First Name</th>
-                <th width="35%">Last Name</th>
-                <th width="30%">Action</th>
+       <th width="25%">First Name</th>
+                <th width="25%">Last Name</th>                
+                <th width="10%">Phone</th>
+                <th width="15%">Created At</th>
+                <th width="15%">Updated At</th>
+                <th width="10%">Action</th>
       </tr>
      </thead>
     </table>
@@ -53,11 +56,21 @@
              <input type="text" name="first_name" id="first_name" class="form-control" />
             </div>
            </div>
+
            <div class="form-group">
             <label class="control-label col-md-4">Last Name : </label>
             <div class="col-md-8">
              <input type="text" name="last_name" id="last_name" class="form-control" />
             </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-md-4">Phone : </label>
+            <div class="col-md-8">
+             <input type="text" name="phone" id="phone" class="form-control" />
+            </div>
+            </div>
+ 
            </div>
                 <br />
                 <div class="form-group" align="center">
@@ -88,7 +101,20 @@ $(document).ready(function(){
    {
     data: 'last_name',
     name: 'last_name'
+   }
+   ,
+   {
+    data: 'phone',
+    name: 'phone'
    },
+   {
+    data: 'created_at',
+    name: 'created_at'
+   }, 
+   {
+    data: 'updated_at',
+    name: 'updated_at'
+   },   
    {
     data: 'action',
     name: 'action',
