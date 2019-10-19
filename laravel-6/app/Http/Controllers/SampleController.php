@@ -52,7 +52,8 @@ class SampleController extends Controller
     {
         $rules = array(
             'first_name'    =>  'required',
-            'last_name'     =>  'required'
+            'last_name'     =>  'required',
+            'phone'         =>  'required'
         );
 
         $error = Validator::make($request->all(), $rules);
@@ -64,7 +65,8 @@ class SampleController extends Controller
 
         $form_data = array(
             'first_name'        =>  $request->first_name,
-            'last_name'         =>  $request->last_name
+            'last_name'         =>  $request->last_name,
+            'phone'             => $request->phone
         );
 
         Sample_data::create($form_data);
